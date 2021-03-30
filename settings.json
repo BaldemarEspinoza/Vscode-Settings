@@ -1,0 +1,119 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "terminal.explorerKind": "external",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.smoothScrolling": true,
+  "workbench.editor.wrapTabs": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.suggestSelection": "first",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
+  "window.newWindowDimensions": "offset",
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.keywords": [
+    {
+      "text": "VIDEO",
+      "color": "#000",
+      "backgroundColor": "#3498db"
+    },
+    {
+      "text": "FIXME",
+      "color": "#000",
+      "backgroundColor": "#e67e22"
+    },
+    {
+      "text": "LEC",
+      "color": "#000",
+      "backgroundColor": "#f1c40f"
+    },
+    {
+      "text": "BUG",
+      "color": "#000",
+      "backgroundColor": "#e74c3c"
+    },
+    {
+      "text": "TODO",
+      "color": "#000",
+      "backgroundColor": "#2ecc71"
+    },
+    {
+      "text": "NOTE",
+      "color": "#000",
+      "backgroundColor": "#1FDEC0"
+    }
+  ],
+  "autoprefixer.options": {
+    "browsers": ["last 4 versions", "ie >= 9", "> 5%"]
+  },
+  "workbench.activityBar.visible": true,
+  "workbench.sideBar.location": "left",
+  "bracket-pair-colorizer-2.excludedLanguages": ["html"],
+  // Font Settings
+  "editor.fontSize": 17,
+  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": "'ss02', 'ss03', 'ss05', 'zero",
+  "terminal.integrated.fontFamily": "Fira Code Retina",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontWeight": "400",
+  "window.title": "${activeEditorMedium}${separator}${rootPath}",
+  "typescript.suggest.paths": false,
+  "editor.rulers": [100],
+  "terminal.integrated.env.windows": {
+    "CMDER_ROOT": "C:\\tools\\cmder"
+  },
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "terminal.integrated.shellArgs.windows": [
+    "/k",
+    "%CMDER_ROOT%\\vendor\\init.bat"
+  ],
+  "terminal.external.windowsExec": "C:\\tools\\cmder\\Cmder.exe",
+  "cSpell.ignoreWords": ["btn", "btns"],
+  "editor.linkedEditing": true,
+  "debug.javascript.usePreview": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "debug.console.fontFamily": "Fira Code Retina",
+  "debug.console.fontSize": 17,
+  "markdown.preview.fontSize": 17,
+  "editor.rename.enablePreview": false,
+  // Error Lens
+  "errorLens.fontFamily": "Fira Code Retina",
+  "errorLens.fontSize": "17",
+  "errorLens.fontWeight": "400",
+  "errorLens.messageEnabled": true,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.addNumberOfDiagnostics": true,
+  // "errorLens.exclude": ["Unknown word"]
+  "errorLens.gutterIconSet": "defaultOutline",
+  "errorLens.gutterIconSize": "85%",
+  "tabnine.experimentalAutoImports": true,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "cSpell.userWords": ["Baldemar", "minmax"],
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.minimap.scale": 3,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.showOutputWindow": false,
+  "liveServer.settings.fullReload": true,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "colorize.colorized_variables": ["SASS", "CSS"],
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.wordWrap": "on",
+  "svg.preview.mode": "svg",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
