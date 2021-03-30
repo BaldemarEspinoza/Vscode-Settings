@@ -1,20 +1,21 @@
 {
-  "files.autoSave": "afterDelay",
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "terminal.explorerKind": "external",
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "window.zoomLevel": 1,
-  "workbench.iconTheme": "vscode-icons",
-  "editor.smoothScrolling": true,
-  "workbench.editor.wrapTabs": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "editor.suggestSelection": "first",
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "Winter is Coming (Dark Blue)",
-  "window.newWindowDimensions": "offset",
+  "files.autoSave": "afterDelay", // this saves all files after one second
+  "editor.formatOnSave": true, // this formats the file whenever you save using the pretiier extension
+  "editor.tabSize": 2, // this sets the tab size to 2 which is also the defualt with prettier
+  "window.zoomLevel": 1, //this sets the zoom level of the editor
+  "workbench.iconTheme": "vscode-icons", //this is what sets the file, icons from the file icon extension
+  "editor.smoothScrolling": true, // this makes scrolling be more smooth
+  "workbench.editor.wrapTabs": true, //this makes tabs wrap in a werid way when you have a lot of tabs
+  "vsicons.dontShowNewVersionMessage": true, // config for vs icons extensions
+  "editor.suggestSelection": "first", // idk what this does
+  "explorer.confirmDelete": false, // confirmation popup when deleting
+  "explorer.confirmDragAndDrop": false, // confirmation popup when drag and dropping files
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)", // this is what sets my theme winter is coming
+  "window.newWindowDimensions": "offset", // forgot what this does exactly
+
+  /*
+  setting for the todo highlight extension
+  */
   "todohighlight.isCaseSensitive": true,
   "todohighlight.keywords": [
     {
@@ -48,13 +49,19 @@
       "backgroundColor": "#1FDEC0"
     }
   ],
+  /*
+  End of todo highlight settings
+  */
+
   "autoprefixer.options": {
-    "browsers": ["last 4 versions", "ie >= 9", "> 5%"]
+    "browsers": ["last 4 versions", "ie >= 9", "> 5%"] //setting for the autoprefix estension
   },
-  "workbench.activityBar.visible": true,
-  "workbench.sideBar.location": "left",
+
+  "workbench.activityBar.visible": true, // makes activity bar visible
+  "workbench.sideBar.location": "left", //puts sidebar on left
   "bracket-pair-colorizer-2.excludedLanguages": ["html"],
-  // Font Settings
+
+  // Font Settings (remove if you dont use fira code font)
   "editor.fontSize": 17,
   "editor.fontFamily": "Fira Code Retina",
   "editor.fontWeight": "400",
@@ -63,26 +70,39 @@
   "terminal.integrated.fontSize": 17,
   "terminal.integrated.fontWeight": "400",
   "window.title": "${activeEditorMedium}${separator}${rootPath}",
-  "typescript.suggest.paths": false,
-  "editor.rulers": [100],
+  "typescript.suggest.paths": false, // something for typescript forgot what it does
+  "editor.rulers": [100], // sets a line at 100 characters
+
+  /*
+  Terminal settings (remove all if you dont use CMDER Terminal)
+  */
+  "terminal.explorerKind": "external", // this is for  my terminal which is a special one I downlaoded called Cmder
+  "terminal.integrated.cursorBlinking": true, // this changes the way the cursor blinkns in the terminal
+  "terminal.integrated.cursorStyle": "line", //this changes the cursor in the terminal from a block to a line
   "terminal.integrated.env.windows": {
-    "CMDER_ROOT": "C:\\tools\\cmder"
+    // this is what sets my terminal to CMDER if you dont have cmder then you should prob rmeove this estting
+    "CMDER_ROOT": "C:\\tools\\cmder" //config for the terminal
   },
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe", // more config for terminal
   "terminal.integrated.shellArgs.windows": [
     "/k",
     "%CMDER_ROOT%\\vendor\\init.bat"
   ],
   "terminal.external.windowsExec": "C:\\tools\\cmder\\Cmder.exe",
-  "cSpell.ignoreWords": ["btn", "btns"],
-  "editor.linkedEditing": true,
-  "debug.javascript.usePreview": true,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "debug.console.fontFamily": "Fira Code Retina",
-  "debug.console.fontSize": 17,
-  "markdown.preview.fontSize": 17,
+  /*
+  End of terminal settings
+  */
+
+  "cSpell.ignoreWords": ["btn", "btns"], //this is some words to ignore for the code spell check extension
+  "editor.linkedEditing": true, // idk what this does i forgot
+  "debug.javascript.usePreview": true, // for debugging javascript
+  "liveServer.settings.donotShowInfoMsg": true, // for the live server extension
+  "debug.console.fontFamily": "Fira Code Retina", // sets debug console font to fira code retina (remove if you dont use the font)
+  "debug.console.fontSize": 17, // font size for debug console
+  "markdown.preview.fontSize": 17, // font size for markdown
   "editor.rename.enablePreview": false,
-  // Error Lens
+
+  // Error Lens extension
   "errorLens.fontFamily": "Fira Code Retina",
   "errorLens.fontSize": "17",
   "errorLens.fontWeight": "400",
@@ -92,12 +112,18 @@
   // "errorLens.exclude": ["Unknown word"]
   "errorLens.gutterIconSet": "defaultOutline",
   "errorLens.gutterIconSize": "85%",
-  "tabnine.experimentalAutoImports": true,
-  "editor.acceptSuggestionOnEnter": "smart",
-  "cSpell.userWords": ["Baldemar", "minmax"],
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.minimap.scale": 3,
+
+  "tabnine.experimentalAutoImports": true, // setting for tabnine extension
+  "editor.acceptSuggestionOnEnter": "smart", // setting for tabnine extension
+  "cSpell.userWords": ["Baldemar", "minmax"], // setting for spell cehcker extension
+  "editor.cursorSmoothCaretAnimation": true, // makes the cursor super smooth highly recommend
+  "editor.minimap.scale": 3, // makes the minimap bigger
+
+  /*
+  Live sass compiler extension
+  */
   "liveSassCompile.settings.formats": [
+    //setting for the live sass compiler extension in regards to formatiing
     {
       "format": "expanded",
       "extensionName": ".css",
@@ -106,14 +132,19 @@
   ],
   "liveSassCompile.settings.showOutputWindow": false,
   "liveServer.settings.fullReload": true,
+  /*
+  end of Live sass compiler extension
+  */
 
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // setting for the prettier formatter extensions
 
-  "colorize.colorized_variables": ["SASS", "CSS"],
-  "liveServer.settings.donotVerifyTags": true,
-  "editor.wordWrap": "on",
-  "svg.preview.mode": "svg",
+  "colorize.colorized_variables": ["SASS", "CSS"], // setting for the colorize css and sass variables extensions (colorize)
+  "liveServer.settings.donotVerifyTags": true, // setting for li veserver extension
+  "editor.wordWrap": "on", // makes words wrap in small screens
+  "svg.preview.mode": "svg", // setting for the svg extension
+
   "emmet.includeLanguages": {
+    // enalbes emmet in react
     "javascript": "javascriptreact"
   }
 }
