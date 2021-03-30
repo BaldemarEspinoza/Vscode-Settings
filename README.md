@@ -1,8 +1,8 @@
 # Vscode
-'Most important files are the extensions.json and the settings,json'
+’Most important files are the extensions.json and the settings.json
 
-> there you can look at my extensions and settings
+there you can look at my extensions and settings
 
-> to look at my extensions look at the name in the extensions.json.
+to look at my extensions look at the name in the extensions.json.
 
-> you can also look at all the pictures of my extensions
+you can also look at all the pictures of my extensions`
