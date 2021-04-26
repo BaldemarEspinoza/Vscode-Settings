@@ -1,23 +1,106 @@
+/**********************************************************************
+ *|                                                                  |*
+ *|          _  _                                 _                  |*
+ *|        FJ  L]  ____     ____     ____     ___FJ    ____          |*
+ *|       J |  | LF ___J   F ___J.  F __ J   F __  L  F __ J         |*
+ *|       J J  F | '----_ | |---LJ | |--| | | |--| | | _____J        |*
+ *|       J\ \/ /)-____  LF L___--.F L__J J F L__J J F L___--.       |*
+ *|        \\__/J\______/J\______/J\______/J\____,__J\______/F       |*
+ *|         \__/ J______F J______F J______F J____,__FJ______F        |*
+ *|                                                                  |*
+ *|      ___             _     _    __                               |*
+ *|     F __".   ____   FJ_   FJ_   LJ  _ ___     ___ _    ____      |*
+ *|    J (___|  F __ J J  _| J  _|     J '__ J   F __` L  F ___J     |*
+ *|    J\___ \ | _____J| |-' | |-'  FJ | |__| | | |--| | | '----_    |*
+ *|   .--___) \F L___--F |__-F |__-J  LF L  J J F L__J J )-____  L   |*
+ *|   J\______J\______/\_____\_____J__J__L  J__L)-____  J\______/F   |*
+ *|    J______FJ______FJ_____J_____|__|__L  J__J\______/FJ______F    |*
+ *|                                             J______F             |*
+ *|                                                                  |*
+ *********************************************************************/
 {
-  "files.autoSave": "afterDelay", // this saves all files after one second
-  "editor.formatOnSave": true, // this formats the file whenever you save using the pretiier extension
-  "editor.tabSize": 2, // this sets the tab size to 2 which is also the defualt with prettier
-  "window.zoomLevel": 1, //this sets the zoom level of the editor
-  "workbench.iconTheme": "vscode-icons", //this is what sets the file, icons from the file icon extension
+  //! --------- color customizations ---------  !\\
+  "workbench.colorCustomizations": {
+    // changes the default color of various vscode parts
+    "terminal.ansiGreen": "#29ff00", // changes the color of the defualt terminal green color to the specified hex code
+    "terminal.ansiBrightGreen": "#29ff00", // changes the color of the defualt terminal bright green color to the specified hex code
+    "terminal.ansiYellow": "#fff803", // changes the color of the defualt terminal yellow color to the specified hex code
+    "terminal.ansiRed": "#fc2216", // changes the color of the defualt terminal red color to the specified hex code
+    "gitDecoration.conflictingResourceForeground": "#fc2216", // changes the color of the defualt built in git conflict color to the specified hex code
+    "gitDecoration.stageModifiedResourceForeground": "#fff803", // changes the color of the defualt built in git modification color to the specified hex code
+    "editorCursor.background": "#d5d9e2" // changes the color of the text when  the cursor is over it (block cursor)
+  },
+  //?  --------- terminal settings ---------  ?\\
+  "terminal.integrated.env.windows": {
+    // this is what sets my terminal to CMDER if you dont have cmder then you should prob rmeove this estting
+    "CMDER_ROOT": "C:\\tools\\cmder" //config for the terminal
+  },
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe", // more config for terminal
+
+  "terminal.integrated.shellArgs.windows": [
+    // config for cmder with terminal arguments and vscode specific file location
+    "/k",
+    "%CMDER_ROOT%\\vendor\\init.bat"
+  ],
+  "terminal.external.windowsExec": "C:\\tools\\cmder\\Cmder.exe", // tells vscode to look for cmder and use it
+  "terminal.integrated.cursorBlinking": true, // this changes the way the cursor blinkns in the terminal
+  "terminal.integrated.cursorStyle": "line", // this is for  my terminal which is a special one I downlaoded called Cmder
+  "terminal.integrated.fontFamily": "FiraCode NF Retina", // sets the font in the integrated temrinal
+  "terminal.integrated.fontWeight": "400", // sets the font weight of the integrated terminal
+  "terminal.integrated.fontSize": 17, // sets the font size of the integrated terminal
+
+  //*  --------- vscode built in settings ---------  *\\
+  "debug.javascript.usePreview": true, // for debugging javascript
+  "editor.formatOnSave": true, // this formats the file whenever you save using a formatter extension
+  "editor.tabSize": 2, // set the total spaces for a tab
   "editor.smoothScrolling": true, // this makes scrolling be more smooth
-  "workbench.editor.wrapTabs": true, //this makes tabs wrap in a werid way when you have a lot of tabs
-  "vsicons.dontShowNewVersionMessage": true, // config for vs icons extensions
   "editor.suggestSelection": "first", // idk what this does
+  "editor.rulers": [110], // sets a line at 100 characters
+  "editor.linkedEditing": true, // idk what this does i forgot
+  "editor.rename.enablePreview": false, // shows a preview when renaming
+  "editor.cursorSmoothCaretAnimation": true, // makes the cursor super smooth highly recommend
+  "editor.minimap.scale": 3, // makes the minimap bigger
+  "editor.wordWrap": "on", // makes words wrap in small screens
   "explorer.confirmDelete": false, // confirmation popup when deleting
   "explorer.confirmDragAndDrop": false, // confirmation popup when drag and dropping files
-  "workbench.colorTheme": "Winter is Coming (Dark Blue)", // this is what sets my theme winter is coming
+  "files.autoSave": "afterDelay", // this saves all files after one second
+  "typescript.suggest.paths": false, // something for typescript forgot what it does
+  "vsicons.dontShowNewVersionMessage": true, // config for vs icons extensions
+  "window.zoomLevel": 1, // set the zoom level of the editor
   "window.newWindowDimensions": "offset", // forgot what this does exactly
+  "window.title": "${activeEditorMedium}${separator}${rootPath}", // sets what is dsiplayed at the top of the editor
+  "workbench.iconTheme": "vscode-icons", //this is what sets the file, icons from the file icon extension
+  "workbench.editor.wrapTabs": true, //this makes tabs wrap in a werid way when you have a lot of tabs
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)", // this is what sets my theme winter is coming
+  "workbench.activityBar.visible": true, // makes activity bar visible
+  "workbench.sideBar.location": "left", //puts sidebar on left
 
-  /*
-  setting for the todo highlight extension
-  */
-  "todohighlight.isCaseSensitive": true,
+  // Font Settings (remove "Fira Code Retina" parts if you dont use fira code font)
+  "editor.fontSize": 17, // sets the font size of text in the editor
+  "editor.fontFamily": "Fira Code Retina", // sets editor font to fira code (remove if you dont use the font)
+  "editor.fontWeight": "400", // sets editor font weight
+  "editor.fontLigatures": "'ss02', 'ss03', 'ss05', 'zero'", // specific settings for fira code font ligatures (remove if u dont use fira code font)
+  "debug.console.fontFamily": "Fira Code Retina", // sets debug console font to fira code retina (remove if you dont use the font)
+  "debug.console.fontSize": 17, // font size for debug console
+  "markdown.preview.fontSize": 17, // font size for markdown
+
+  /***********************************************************************************************
+   *|                                                                                           |*
+   *|    ______      _                 _                _____      _   _   _                    |*
+   *|   |  ____|    | |               (_)              / ____|    | | | | (_)                   |*
+   *|   | |__  __  _| |_ ___ _ __  ___ _  ___  _ __   | (___   ___| |_| |_ _ _ __   __ _ ___    |*
+   *|   |  __| \ \/ / __/ _ \ '_ \/ __| |/ _ \| '_ \   \___ \ / _ \ __| __| | '_ \ / _` / __|   |*
+   *|   | |____ >  <| ||  __/ | | \__ \ | (_) | | | |  ____) |  __/ |_| |_| | | | | (_| \__ \   |*
+   *|   |______/_/\_\\__\___|_| |_|___/_|\___/|_| |_| |_____/ \___|\__|\__|_|_| |_|\__, |___/   |*
+   *|                                                                              __/ |        |*
+   *|                                                                             |___/         |*
+   *|                                                                                           |*
+   **********************************************************************************************/
+
+  // settings for the todo highlight extension
+  "todohighlight.isCaseSensitive": true, // sets the words highlihgted must be uppercase
   "todohighlight.keywords": [
+    // specifies what word the color highlihgt extension should highlight
     {
       "text": "VIDEO",
       "color": "#000",
@@ -49,79 +132,37 @@
       "backgroundColor": "#1FDEC0"
     }
   ],
-  /*
-  End of todo highlight settings
-  */
 
+  // autoprefixer extension settings
   "autoprefixer.options": {
     "browsers": ["last 4 versions", "ie >= 9", "> 5%"] //setting for the autoprefix estension
   },
 
-  "workbench.activityBar.visible": true, // makes activity bar visible
-  "workbench.sideBar.location": "left", //puts sidebar on left
-  "bracket-pair-colorizer-2.excludedLanguages": ["html"],
-
-  // Font Settings (remove if you dont use fira code font)
-  "editor.fontSize": 17,
-  "editor.fontFamily": "Fira Code Retina",
-  "editor.fontWeight": "400",
-  "editor.fontLigatures": "'ss02', 'ss03', 'ss05', 'zero",
-  "terminal.integrated.fontFamily": "Fira Code Retina",
-  "terminal.integrated.fontSize": 17,
-  "terminal.integrated.fontWeight": "400",
-  "window.title": "${activeEditorMedium}${separator}${rootPath}",
-  "typescript.suggest.paths": false, // something for typescript forgot what it does
-  "editor.rulers": [100], // sets a line at 100 characters
-
-  /*
-  Terminal settings (remove all if you dont use CMDER Terminal)
-  */
-  "terminal.explorerKind": "external", // this is for  my terminal which is a special one I downlaoded called Cmder
-  "terminal.integrated.cursorBlinking": true, // this changes the way the cursor blinkns in the terminal
-  "terminal.integrated.cursorStyle": "line", //this changes the cursor in the terminal from a block to a line
-  "terminal.integrated.env.windows": {
-    // this is what sets my terminal to CMDER if you dont have cmder then you should prob rmeove this estting
-    "CMDER_ROOT": "C:\\tools\\cmder" //config for the terminal
-  },
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe", // more config for terminal
-  "terminal.integrated.shellArgs.windows": [
-    "/k",
-    "%CMDER_ROOT%\\vendor\\init.bat"
-  ],
-  "terminal.external.windowsExec": "C:\\tools\\cmder\\Cmder.exe",
-  /*
-  End of terminal settings
-  */
-
+  // spell check extension settings
   "cSpell.ignoreWords": ["btn", "btns"], //this is some words to ignore for the code spell check extension
-  "editor.linkedEditing": true, // idk what this does i forgot
-  "debug.javascript.usePreview": true, // for debugging javascript
+  "cSpell.userWords": ["Baldemar", "minmax"], // setting that adds specified words to dictionary
+
+  // live server extension settings
   "liveServer.settings.donotShowInfoMsg": true, // for the live server extension
-  "debug.console.fontFamily": "Fira Code Retina", // sets debug console font to fira code retina (remove if you dont use the font)
-  "debug.console.fontSize": 17, // font size for debug console
-  "markdown.preview.fontSize": 17, // font size for markdown
-  "editor.rename.enablePreview": false,
+  "liveServer.settings.fullReload": true, // makes live server refresh the page than just update
+  "liveServer.settings.donotVerifyTags": true, // setting for live server extension
 
   // Error Lens extension
-  "errorLens.fontFamily": "Fira Code Retina",
-  "errorLens.fontSize": "17",
-  "errorLens.fontWeight": "400",
-  "errorLens.messageEnabled": true,
-  "errorLens.gutterIconsEnabled": true,
-  "errorLens.addNumberOfDiagnostics": true,
-  // "errorLens.exclude": ["Unknown word"]
-  "errorLens.gutterIconSet": "defaultOutline",
-  "errorLens.gutterIconSize": "85%",
+  "errorLens.fontFamily": "Fira Code Retina", // sets error lens font family
+  "errorLens.fontSize": "17", // sets error lens font size
+  "errorLens.fontWeight": "400", // sets error lens font family
+  "errorLens.messageEnabled": true, // makes error lens inline message visible
+  "errorLens.gutterIconsEnabled": true, // enables error lens gutter icons visible
+  "errorLens.addNumberOfDiagnostics": true, // if multiple error on one line it will display number for amount of error
+  // "errorLens.exclude": ["Unknown word"] // turn this on to stop error lens from showing spell check errors
+  "errorLens.gutterIconSet": "defaultOutline", // changes icons in error lens extension
+  "errorLens.gutterIconSize": "85%", // sets size of icons in error lens
 
+  // tabnine autocomplete settings
   "tabnine.experimentalAutoImports": true, // setting for tabnine extension
   "editor.acceptSuggestionOnEnter": "smart", // setting for tabnine extension
-  "cSpell.userWords": ["Baldemar", "minmax"], // setting for spell cehcker extension
-  "editor.cursorSmoothCaretAnimation": true, // makes the cursor super smooth highly recommend
-  "editor.minimap.scale": 3, // makes the minimap bigger
 
-  /*
-  Live sass compiler extension
-  */
+  // Live sass compiler extension
   "liveSassCompile.settings.formats": [
     //setting for the live sass compiler extension in regards to formatiing
     {
@@ -130,21 +171,133 @@
       "savePath": "/css"
     }
   ],
-  "liveSassCompile.settings.showOutputWindow": false,
-  "liveServer.settings.fullReload": true,
-  /*
-  end of Live sass compiler extension
-  */
 
+  // prettier settings
   "editor.defaultFormatter": "esbenp.prettier-vscode", // setting for the prettier formatter extensions
 
+  // colorize extension settings
   "colorize.colorized_variables": ["SASS", "CSS"], // setting for the colorize css and sass variables extensions (colorize)
-  "liveServer.settings.donotVerifyTags": true, // setting for li veserver extension
-  "editor.wordWrap": "on", // makes words wrap in small screens
-  "svg.preview.mode": "svg", // setting for the svg extension
+
+  // svg extension settings
+
+  // emmet settings  "svg.preview.mode": "svg", // setting for the svg extension
 
   "emmet.includeLanguages": {
     // enalbes emmet in react
     "javascript": "javascriptreact"
+  },
+  // project manager settings
+  "projectManager.git.baseFolders": [
+    "C:\\Users\\thisr\\OneDrive\\Desktop\\Projects\\Git"
+  ],
+
+  //*  --------- vim settings ---------  *\\
+
+  /******************************************
+   *          ---- Warning ----             *
+   * Vim is a highly complex editor that is *
+   * not user freindly. If you do not know  *
+   * how to use vim delete any thing with   *
+   * the word vim below.                    *
+   *****************************************/
+
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.surround": true,
+  "vim.showcmd": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(16, 51, 98, 0.69)",
+  "vim.highlightedyank.duration": 1000,
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>", "l"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "after": ["_"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-a>": false,
+    // VS Code new marker @ next occurence
+    "<C-d>": false,
+    // Copy
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false
   }
 }
