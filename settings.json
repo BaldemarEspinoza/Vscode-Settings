@@ -18,7 +18,7 @@
  *|                                             J______F             |*
  *|                                                                  |*
  *********************************************************************/
-{
+ {
   //! --------- color customizations ---------  !\\
   "workbench.colorCustomizations": {
     // changes the default color of various vscode parts
@@ -65,15 +65,16 @@
   "explorer.confirmDragAndDrop": false, // confirmation popup when drag and dropping files
   "files.autoSave": "afterDelay", // this saves all files after one second
   "typescript.suggest.paths": false, // something for typescript forgot what it does
-  "vsicons.dontShowNewVersionMessage": true, // config for vs icons extensions
-  "window.zoomLevel": 1, // set the zoom level of the editor
+  "vsicons.dontShowNewVersionMessage": true, // set the zoom level of the editor
+  "window.zoomLevel": 1,
   "window.newWindowDimensions": "offset", // forgot what this does exactly
   "window.title": "${activeEditorMedium}${separator}${rootPath}", // sets what is dsiplayed at the top of the editor
-  "workbench.iconTheme": "vscode-icons", //this is what sets the file, icons from the file icon extension
+  "workbench.iconTheme": "material-icon-theme", //this is what sets the file, icons from the file icon extension
   "workbench.editor.wrapTabs": true, //this makes tabs wrap in a werid way when you have a lot of tabs
-  "workbench.colorTheme": "Winter is Coming (Dark Blue)", // this is what sets my theme winter is coming
+  "workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)", // this is what sets my theme winter is coming
   "workbench.activityBar.visible": true, // makes activity bar visible
   "workbench.sideBar.location": "left", //puts sidebar on left
+  "telemetry.enableTelemetry": false, // makes it so data is not sent to microsoft
 
   // Font Settings (remove "Fira Code Retina" parts if you dont use fira code font)
   "editor.fontSize": 17, // sets the font size of text in the editor
@@ -133,6 +134,43 @@
     }
   ],
 
+  // settings for stylelint extension
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // settings for path autocomplete extension
+  "path-autocomplete.excludedItems": {
+    "**/{.git,node_modules}": { "when": "**" }, // always ignore .git and node_modules folders
+    "**": { "when": "**", "isDir": true } // always ignore `folder` suggestions
+  },
+
+  // setting for icons extension
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.folders.color": "#dcb06d",
+
+  // settings for auto import extension
+  "autoimport.autoComplete": true,
+  "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
+
+  // setting for auto rename extensions that tells it in what languages to enable
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+
+  // enabled languages for the html css support extension
+  "css.enabledLanguages": [
+    "html",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript",
+    "javascript"
+  ],
+
   // autoprefixer extension settings
   "autoprefixer.options": {
     "browsers": ["last 4 versions", "ie >= 9", "> 5%"] //setting for the autoprefix estension
@@ -160,7 +198,7 @@
 
   // tabnine autocomplete settings
   "tabnine.experimentalAutoImports": true, // setting for tabnine extension
-  "editor.acceptSuggestionOnEnter": "smart", // setting for tabnine extension
+  "editor.acceptSuggestionOnEnter": "off", // setting for tabnine extension
 
   // Live sass compiler extension
   "liveSassCompile.settings.formats": [
@@ -220,6 +258,7 @@
       "after": ["^"]
     }
   ],
+
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -276,6 +315,14 @@
     {
       "before": ["<leader>", "l"],
       "after": ["$"]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "after": ["o", "<Esc>"]
+    },
+    {
+      "before": ["<leader>", "O"],
+      "after": ["O", "<Esc>"]
     }
   ],
   "vim.visualModeKeyBindings": [
