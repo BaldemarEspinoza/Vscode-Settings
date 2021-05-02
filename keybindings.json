@@ -38,7 +38,7 @@
   },
   {
     "key": "ctrl+n",
-    "command": "extension.advancedNewFile",
+    "command": "fileutils.newFile",
     "when": "!terminalFocus"
   },
   {
@@ -94,5 +94,15 @@
     "key": "shift+k",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "f2",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   }
 ]
