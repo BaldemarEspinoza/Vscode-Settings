@@ -56,6 +56,8 @@ you can also look at all the pictures of my extensions
 
 - [Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) - Linting, auto-completion, code formatting, snippets and more
 
+## Productivity
+
 ## [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 
 > Show language diagnostics inline (errors/warnings/...).
@@ -110,13 +112,15 @@ you can also look at all the pictures of my extensions
 
 > Easily switch between projects.
 
-![Switch between projects screenshot](https://raw.githubusercontent.com/alefragnani/vscode-project-manager/master/images/project-manager-commands.png)
-
 ## [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 > Allows you to send HTTP request and view the response in Visual Studio Code directly.
 
 ![Send HTTP request and view response animation](https://raw.githubusercontent.com/Huachao/vscode-restclient/master/images/usage.gif)
+
+## [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+
+> Vim Mode - Relatively new, but promising extension implementing Vim features in VSCode
 
 ## Formatting & Beautification
 
