@@ -15,7 +15,7 @@ you can also look at all the pictures of my extensions
 
 > Info taken from awesome-vscode, please support the official release
 
-### [awesome-vscode](https://github.com/viatsko/awesome-vscode)
+### [awesome-vscode](https://github.com/viatsko/awesome-vscode){:target="_blank"}
 
 ## CSS
 
