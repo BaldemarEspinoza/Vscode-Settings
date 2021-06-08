@@ -31,23 +31,22 @@
     "editorCursor.background": "#d5d9e2" // changes the color of the text when  the cursor is over it (block cursor)
   },
   //?  --------- terminal settings ---------  ?\\
-  "terminal.integrated.env.windows": {
-    // this is what sets my terminal to CMDER if you dont have cmder then you should prob rmeove this estting
-    "CMDER_ROOT": "C:\\tools\\cmder" //config for the terminal
+  
+  "terminal.integrated.profiles.windows": {
+    "zsh": {
+      "icon": "terminal-linux",
+      "path": ["C:\\cygwin64\\bin\\zsh.exe"],
+      "env": { "CHERE_INVOKING": "1" },
+      "args": ["--login"]
+    }
   },
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe", // more config for terminal
-
-  "terminal.integrated.shellArgs.windows": [
-    // config for cmder with terminal arguments and vscode specific file location
-    "/k",
-    "%CMDER_ROOT%\\vendor\\init.bat"
-  ],
-  "terminal.external.windowsExec": "C:\\tools\\cmder\\Cmder.exe", // tells vscode to look for cmder and use it
+  "terminal.integrated.defaultProfile.windows": "zsh",
   "terminal.integrated.cursorBlinking": true, // this changes the way the cursor blinkns in the terminal
   "terminal.integrated.cursorStyle": "line", // this is for  my terminal which is a special one I downlaoded called Cmder
   "terminal.integrated.fontFamily": "FiraCode NF Retina", // sets the font in the integrated temrinal
   "terminal.integrated.fontWeight": "400", // sets the font weight of the integrated terminal
   "terminal.integrated.fontSize": 17, // sets the font size of the integrated terminal
+  // "terminal.integrated.tabs.enabled": true,
 
   //*  --------- vscode built in settings ---------  *\\
   "debug.javascript.usePreview": true, // for debugging javascript
